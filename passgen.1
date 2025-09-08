@@ -1,0 +1,69 @@
+.TH PASSGEN 1 "September 2025" "passgen" "User Commands"
+
+.SH NAME
+passgen \- generate a random password
+
+.SH SYNOPSIS
+.B passgen
+.RI [ options ]
+
+.SH DESCRIPTION
+\fBpassgen\fR is a command-line utility that generates random passwords based on user-defined criteria.
+It allows users to specify the length of the password and whether to include letters, digits, and symbols.
+
+.SH OPTIONS
+.TP
+.B \-l, \--length
+Specify the length of the password. This option is required and must be a positive integer.
+
+.TP
+.B \-a, \--letters
+Include letters (both uppercase and lowercase) in the generated password.
+
+.TP
+.B \-d, \--digits
+Include digits (0-9) in the generated password.
+
+.TP
+.B \-s, \--symbols
+Include symbols (e.g., !@#$%^&*-=_+) in the generated password.
+
+.TP
+.B \-o, \--save-to
+Specify a file to save the generated password. If this option is not provided, the password will be printed to the standard output.
+
+.SH EXAMPLES
+.TP
+.B passgen -l 12 -a -d -s
+Generate a 12-character password that includes letters, digits, and symbols.
+
+.TP
+.B passgen -l 16 -a -d
+Generate a 16-character password that includes letters and digits only.
+
+.TP
+.B passgen -l 8 -s -o password.txt
+Generate an 8-character password that includes symbols and save it to 'password.txt'.
+
+.SH AUTHORS
+Currently maintained by Kinderfeld <https://github.com/Kinderfeld>
+
+.SH COPYRIGHT
+Copyright (C) 2025 Archetypum
+
+\fBpassgen\fR is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+\fBpassgen\fR is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with \fBpassgen\fR. If not, see <https://www.gnu.org/licenses/>.
+
+.SH REPORTING BUGS
+Project homepage: <https://github.com/Archetypum/passgen>
+
